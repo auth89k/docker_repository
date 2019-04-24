@@ -159,14 +159,17 @@ $ find / -name nginx.conf # nginx.conf 경로 확인
 ```
 
 ## 자주쓴 도커 명령어
-```zsh
+```
 # 컨테이너 전체 삭제
 $ docker stop $(docker ps -a -q)
 $ docker rm $(docker ps -a -q)
+
 # 이미지 전체 삭제
 $ docker rmi $(docker images -q)
+
 #이미지 tag none인것만 삭제
 $ docker rmi $(docker images -f "dangling=true" -q)
+
 # 배쉬 접속
 $ docker exec -it fc8761f89097 /bin/bash
 
